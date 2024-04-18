@@ -21,7 +21,7 @@ const MovieList = () =>{
     }
     return(
         <div className="movie_list">
-            <h2 className="list title">{(type ? type : "Top Rated").toUpperCase()}</h2>
+            <h2 className="list title">{(type ? type.replaceAll("_", " ") : "Top Rated").toUpperCase()}</h2>
             <div className="list_cards">
                 {
                     movieList.map((movie, id)=>(
